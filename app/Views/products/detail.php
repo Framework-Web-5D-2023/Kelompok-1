@@ -10,9 +10,14 @@
       <h3 class="d-inline-block"><?= $products["title"]; ?></h3>
     </div>
     <div class="mt-5">
+      <h3 style="width:200px;" class="d-inline-block">Gambar</h3>
+      <span class="d-inline-block mx-3">:</span>
+	  <img src="<?= base_url("image/" . $products['image']); ?>" class="img-fluid rounded" style="width:80px; height:100px;" alt="">
+    </div>
+    <div class="mt-5">
       <h3 style="width:200px;" class="d-inline-block">Harga</h3>
       <span class="d-inline-block mx-3">:</span>
-      <h3 class="d-inline-block"><?= $products["price"]; ?></h3>
+      <h3 class="d-inline-block">Rp. <?= $products["price"]; ?></h3>
     </div>
     <div class="mt-5">
       <h3 style="width:200px;" class="d-inline-block">Jumlah</h3>

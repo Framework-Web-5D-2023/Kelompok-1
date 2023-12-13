@@ -15,4 +15,7 @@ class CustomersModel extends Model {
 	public function getDetailCustomers($id){
 		return $this->find($id);
 	}
+	public function getDetailCustomers1($id = 1){
+		return $this->find($id);
+	}
 }

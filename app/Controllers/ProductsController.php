@@ -110,8 +110,16 @@ class ProductsController extends BaseController {
 	}
 	public function detail($id) {
 		$products = $this->productsModel->getDetailProducts($id);
-		$customers = $this->customersModel->getDetailCustomers($id);
-		$data = ["title" => "Order Detail","products" => $products,"customers" => $customers];
+		$customerId = ($id == 1) ? $id : 1;
+		$customer = $this->customersModel->getDetailCustomers($customerId);
+		$name = $customer['name'];
+		$phoneNumber = $customer['phoneNumber'];
+		$address = $customer['address'];
+		$data = [
+			"title" => "Order Detail","products" => $products,
+			"customers" => ['name' => $name,'phoneNumber' => $phoneNumber,'address' => $address],
+		];
 		return view('products/detail', $data);
 	}
+
 }

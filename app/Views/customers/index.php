@@ -40,13 +40,17 @@
 				<td>Domisili:</td>
 				<td><?= $p["address"]; ?></td>
 			</tr>
-			<tr>
+			<!--<tr>
 				<td>Username:</td>
-				<td><?= $p["username"]; ?>
+				<td><?//= $p["username"]; ?>
 					<a href="https://github.com/raditya2010631170111" target="_blank" class="btn btn-secondary">
 						<i class="fab fa-github"></i> GitHub Profile
 					</a>
 				</td>
+			</tr>-->
+			<tr>
+				<td>Photo Profile:</td>
+				<td><img src="<?= base_url("image/" . $p['image']); ?>" class="img-fluid rounded" style="width:80px; height:100px;" alt=""></td>
 			</tr>
 		</table>
       <?php endforeach; ?>

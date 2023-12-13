@@ -25,6 +25,7 @@
         <th scope="col">Title</th>
         <th scope="col">Category</th>
         <th scope="col">Harga</th>
+        <th scope="col">Jumlah</th>
         <th scope="col">Action</th>
       </tr>
     </thead>
@@ -37,6 +38,7 @@
           <td><?= $p["title"]; ?></td>
           <td><?= $p["category"]; ?></td>
           <td><?= $p["price"]; ?></td>
+          <td><?= $p["quantity"]; ?></td>
           <td>
             <a href="<?= site_url("products/destroy/" . $p["id"]); ?>" class="btn btn-danger btn-sm">Delete</a>
             <a href="<?= site_url("products/update/" . $p["id"]); ?>" class="btn btn-primary btn-sm">Update</a>
